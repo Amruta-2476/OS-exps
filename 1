@@ -1,0 +1,183 @@
+-sh-4.2$ pwd                                                                
+/home/Amruta20                                                              
+-sh-4.2$ ls                                                                 
+-sh-4.2$ mkdir osexp                                                        
+-sh-4.2$ cd osexp                                                           
+-sh-4.2$ touch exp1.txt                                                     
+-sh-4.2$ nano exp1.txt                                                      
+-sh-4.2$ nano exp1.txt                                                      
+-sh-4.2$ ls                                                                 
+exp1.txt                                                                    
+-sh-4.2$ touch exp1copy.txt                                                 
+-sh-4.2$ cp exp1.txt exp1copy.txt                                           
+-sh-4.2$ nano exp1copy.txt                                                  
+-sh-4.2$ ls                                                                 
+exp1copy.txt  exp1.txt                                                      
+-sh-4.2$ cd..                                                               
+-sh: cd..: command not found                                                
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ ls                                                                 
+osexp
+-sh-4.2$ nano exp1.txt                                                      
+-sh-4.2$ ls                                                                 
+osexp
+-sh-4.2$ nano osexp/exp1.txt                                                
+-sh-4.2$ cd osexp                                                           
+-sh-4.2$ ls                                                                 
+exp1copy.txt  exp1.txt                                                      
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ ls                                                                 
+osexp
+-sh-4.2$ mkdir                                                              
+mkdir: missing operand                                                      
+Try 'mkdir --help' for more information.                                    
+-sh-4.2$ mkdir newosexp                                                     
+-sh-4.2$ ls                                                                 
+newosexp  osexp
+-sh-4.2$ cd osexp                                                           
+-sh-4.2$ touch movefile.txt                                                 
+-sh-4.2$ nano movefile.txt                                                  
+-sh-4.2$ ls
+exp1copy.txt  exp1.txt  movefile.txt                                        
+-sh-4.2$ mv movefile.txt newosexp                                           
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ ls                                                                 
+newosexp  osexp
+-sh-4.2$ cd newosexp                                                        
+-sh-4.2$ ls                                                                 
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ ls                                                                 
+newosexp  osexp
+-sh-4.2$ mv osexp/movefile.txt newosexp                                     
+mv: cannot stat ‘osexp/movefile.txt’: No such file or directory             
+-sh-4.2$ ls                                                                 
+newosexp  osexp
+-sh-4.2$ ls                                                                 
+newosexp  osexp
+-sh-4.2$ cd osexp                                                           
+-sh-4.2$ ls                                                                 
+exp1copy.txt  exp1.txt  newosexp                                            
+-sh-4.2$ nano movefile.txt                                                  
+-sh-4.2$ ls
+exp1copy.txt  exp1.txt  newosexp                                            
+-sh-4.2$ rm newosexp                                                        
+-sh-4.2$ ls                                                                 
+exp1copy.txt  exp1.txt                                                      
+-sh-4.2$ touch mvfile.txt                                                   
+-sh-4.2$ nano mvfile.txt                                                    
+-sh-4.2$ ls
+exp1copy.txt  exp1.txt  mvfile.txt                                          
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ ls                                                                 
+newosexp  osexp
+-sh-4.2$ cd newosexp                                                        
+-sh-4.2$ ls                                                                 
+-sh-4.2$ ls                                                                 
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ ls                                                                 
+newosexp  osexp
+-sh-4.2$ mv osexp/mvfile.txt newosexp/                                      
+-sh-4.2$ cd osexp                                                           
+-sh-4.2$ ls                                                                 
+exp1copy.txt  exp1.txt                                                      
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ cd newosexp                                                        
+-sh-4.2$ ls                                                                 
+mvfile.txt                                                                  
+-sh-4.2$ nano mvfile.txt                                                    
+-sh-4.2$ ls                                                                 
+mvfile.txt                                                                  
+-sh-4.2$ cat mvfile.txt                                                     
+this                                                                        
+is moved                                                                    
+file                                                                        
+now                                                                         
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ cd osexp                                                           
+-sh-4.2$ ls                                                                 
+exp1copy.txt  exp1.txt                                                      
+-sh-4.2$ cat exp1.txt exp1copy.txt                                          
+hello there i am amruta                                                     
+1                                                                           
+2                                                                           
+3                                                                           
+4                                                                           
+5                                                                           
+6                                                                           
+7                                                                           
+8                                                                           
+9                                                                           
+10                                                                          
+11                                                                          
+12                                                                          
+13                                                                          
+14                                                                          
+15                                                                          
+hello there i am amruta                                                     
+1                                                                           
+2                                                                           
+3                                                                           
+4                                                                           
+5                                                                           
+6                                                                           
+7                                                                           
+8                                                                           
+9                                                                           
+10                                                                          
+11                                                                          
+12                                                                          
+13                                                                          
+14                                                                          
+15                                                                          
+-sh-4.2$ ls                                                                 
+exp1copy.txt  exp1.txt                                                      
+-sh-4.2$ head exp1.txt                                                      
+hello there i am amruta                                                     
+1                                                                           
+2                                                                           
+3                                                                           
+4                                                                           
+5                                                                           
+6                                                                           
+7                                                                           
+8                                                                           
+9                                                                           
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ head osexp/exp1copy.txt                                            
+hello there i am amruta                                                     
+1                                                                           
+2                                                                           
+3                                                                           
+4                                                                           
+5                                                                           
+6                                                                           
+7                                                                           
+8                                                                           
+9                                                                           
+-sh-4.2$ tail osexp/exp1copy.txt                                            
+6                                                                           
+7                                                                           
+8                                                                           
+9                                                                           
+10                                                                          
+11                                                                          
+12                                                                          
+13                                                                          
+14                                                                          
+15                                                                          
+-sh-4.2$ whoami                                                             
+Amruta20                                                                    
+-sh-4.2$ man ls                                                             
+-sh-4.2$ rm newosexp                                                        
+rm: cannot remove ‘newosexp’: Is a directory                                
+-sh-4.2$ ls                                                                 
+newosexp  osexp
+-sh-4.2$ cd osexp                                                           
+-sh-4.2$ ls                                                                 
+exp1copy.txt  exp1.txt                                                      
+-sh-4.2$ rm exp1copy.txt                                                    
+-sh-4.2$ ls                                                                 
+exp1.txt                                                                    
+-sh-4.2$ cd ..                                                              
+-sh-4.2$ ls                                                                 
+newosexp  osexp
